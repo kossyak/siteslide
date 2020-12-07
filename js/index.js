@@ -74,7 +74,7 @@ class Page {
     async loadPage(page) {
         try {
             const ajax = new XMLHttpRequest();
-            ajax.open("GET", `${page.path}.html`, false)
+            ajax.open("GET", `/${page.path}.html`, false)
             ajax.send()
             const toNodes = doc => new DOMParser().parseFromString(doc, 'text/html').body.querySelector('.content')
             const html = toNodes(ajax.responseText.trim())
