@@ -30,6 +30,7 @@ class Page {
     }
     async transition(path, position) {
         const page = this.map[path]
+        window.history.pushState("", page.name, `/${page.path}.html`)
         this.setArrows(page)
         const html = await this.loadPage(page)
         this.screen.firstElementChild.innerHTML = this.screen.lastElementChild.innerHTML
