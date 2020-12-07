@@ -97,4 +97,6 @@ body {
 }
 pre {
     text-align: left;
+    max-width: max-content;
+    margin: 0 auto;
 }
