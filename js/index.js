@@ -30,7 +30,7 @@ class Page {
     }
     async transition(path, position) {
         const page = this.map[path]
-        window.history.pushState("", page.name, `/${page.path}.html`)
+        window.history.pushState("", page.name, `/siteslide/${page.path}.html`)
         this.setArrows(page)
         const html = await this.loadPage(page)
         this.screen.firstElementChild.innerHTML = this.screen.lastElementChild.innerHTML
@@ -74,7 +74,7 @@ class Page {
     async loadPage(page) {
         try {
             const ajax = new XMLHttpRequest();
-            ajax.open("GET", `/${page.path}.html`, false)
+            ajax.open("GET", `/siteslide/${page.path}.html`, false)
             ajax.send()
             const toNodes = doc => new DOMParser().parseFromString(doc, 'text/html').body.querySelector('.content')
             const html = toNodes(ajax.responseText.trim())
