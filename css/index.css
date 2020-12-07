@@ -1,0 +1,97 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+body {
+    font-family: Arial;
+}
+.hide {
+    display: none !important;
+}
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100vw;
+    height: 100vh;
+}
+.screen {
+    width: 100vw;
+    position: relative;
+    min-height: inherit;
+    will-change: transform;
+    text-align: center;
+}
+.screen > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 10vmin 15vmin;
+    box-sizing: border-box;
+}
+.arrow {
+    font-size: 2vmin;
+    position: fixed;
+    z-index: 1;
+    cursor: pointer;
+}
+.arrow-img {
+    display: none;
+    position: absolute;
+    top: 16px;
+    width: 32px;
+    height: 32px;
+}
+.arrow-name {
+    padding: 0 .5rem;
+    position: relative;
+    font-family: Viktorie, sans-serif;
+    font-size: 4em;
+    color: #000000;
+}
+.arrow-top {
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+.arrow-right {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+.arrow-bottom {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow-left {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.blocks {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.block {
+    width: 24%;
+    min-width: 200px;
+    margin-bottom: 20px;
+    height: 200px;
+    background-color: #dddddd;
+}
