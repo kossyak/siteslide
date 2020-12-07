@@ -95,3 +95,6 @@ body {
     height: 200px;
     background-color: #dddddd;
 }
+pre {
+    text-align: left;
+}
