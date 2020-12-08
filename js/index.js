@@ -11,8 +11,12 @@ class Page {
         }
         this.wrapper = document.querySelector('.wrapper')
         this.screen = document.querySelector('.screen')
-        const page = map[this.wrapper.id] // decodeURI(window.location.pathname).toString().replace(/^.*[\\\/]/, '')
-        this.render().then(() => this.setArrows(page))
+        const path = decodeURI(window.location.pathname).toString().replace(/^.*[\\\/]/, '')
+        for (const key in map) {
+            if (map[key].path === path ) {
+                this.render().then(() => this.setArrows(map[key]))
+            }
+        }
     }
     setArrows(page) {
         for (const position in page.navigate) {
@@ -30,7 +34,7 @@ class Page {
     }
     async transition(path, position) {
         const page = this.map[path]
-        window.history.pushState("", page.name, `/siteslide/${page.path}.html`)
+        window.history.pushState("", page.name, `/siteslide/${page.path}`)
         this.setArrows(page)
         const html = await this.loadPage(page)
         this.screen.firstElementChild.innerHTML = this.screen.lastElementChild.innerHTML
@@ -74,7 +78,7 @@ class Page {
     async loadPage(page) {
         try {
             const ajax = new XMLHttpRequest();
-            ajax.open("GET", `/siteslide/${page.path}.html`, false)
+            ajax.open("GET", `/siteslide/${page.path}`, false)
             ajax.send()
             const toNodes = doc => new DOMParser().parseFromString(doc, 'text/html').body.querySelector('.content')
             const html = toNodes(ajax.responseText.trim())

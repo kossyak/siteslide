@@ -1,6 +1,6 @@
 export default {
 	home:{
-		path: 'index',
+		path: 'index.html',
 		title: 'home',
 		navigate: {
 			top: 'page',
@@ -10,7 +10,7 @@ export default {
 		}
 	},
 	page: {
-		path: 'page',
+		path: 'page.html',
 		title: 'page',
 		navigate: {
 			top: null,
