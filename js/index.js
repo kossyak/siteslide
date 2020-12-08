@@ -11,7 +11,7 @@ class Page {
         }
         this.wrapper = document.querySelector('.wrapper')
         this.screen = document.querySelector('.screen')
-        const path = decodeURI(window.location.pathname).toString().replace(/^.*[\\\/]/, '')
+        const path = decodeURI(window.location.pathname).toString().replace(/^.*[\\\/]/, '') || 'index.html'
         for (const key in map) {
             if (map[key].path === path ) {
                 this.render().then(() => this.setArrows(map[key]))
