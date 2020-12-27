@@ -37,6 +37,12 @@ body {
     position: fixed;
     z-index: 1;
     cursor: pointer;
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+.arrow-hide .arrow {
+    pointer-events: none;
+    opacity: 0;
 }
 .arrow-img {
     display: none;
@@ -48,7 +54,6 @@ body {
 .arrow-name {
     padding: 0 .5rem;
     position: relative;
-    font-family: Viktorie, sans-serif;
     font-size: 4em;
     color: #000000;
 }

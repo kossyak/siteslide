@@ -6,8 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="fonts/Viktorie.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <script src="js/anime.min.js"></script>
 </head>
 <body>
@@ -15,7 +15,33 @@
     <div class="screen">
         <div class="content">
             <h1>home</h1>
-            <pre><span>home</span>:{<br />   <span>path</span>: <span>'index.html'</span><span>,<br /></span><span>   </span><span>title</span>: <span>'home'</span><span>,<br /></span><span>   </span><span>navigate</span>: {<br />      <span>top</span>: <span>'page'</span><span>,<br /></span><span>      </span><span>right</span>: <span>'page'</span><span>,<br /></span><span>      </span><span>bottom</span>: <span>'home'</span><span>,<br /></span><span>      </span><span>left</span>: <span>'page'<br /></span><span>   </span>}<br />}<span>,<br /></span><span>page</span>: {<br />   <span>path</span>: <span>'page.html'</span><span>,<br /></span><span>   </span><span>title</span>: <span>'page'</span><span>,<br /></span><span>   </span><span>navigate</span>: {<br />      <span>top</span>: <span>null,<br /></span><span>      </span><span>right</span>: <span>null,<br /></span><span>      </span><span>bottom</span>: <span>'home'</span><span>,<br /></span><span>      </span><span>left</span>: <span>'home'<br /></span><span>   </span>}<br />}<span>,</span></pre>
+
+            <pre>
+                {<br />
+                &nbsp;url: &#39;/siteslide&#39;,
+                &nbsp;navigation: {
+                &nbsp; home: {
+                &nbsp; &nbsp;path: &#39;index.html&#39;,
+                &nbsp; &nbsp;title: &#39;home&#39;,
+                &nbsp; &nbsp;navigate: {
+                &nbsp; &nbsp; top: &#39;page&#39;,
+                &nbsp; &nbsp; right: &#39;page&#39;,
+                &nbsp; &nbsp; bottom: &#39;home&#39;,
+                &nbsp; &nbsp; left: &#39;page&#39;
+                &nbsp; &nbsp;}
+                &nbsp; },
+                &nbsp; page: {
+                &nbsp; &nbsp;path: &#39;page.html&#39;,
+                &nbsp; &nbsp;title: &#39;page&#39;,
+                &nbsp; &nbsp;navigate: {
+                &nbsp; &nbsp; top: null,
+                &nbsp; &nbsp; right: null,
+                &nbsp; &nbsp; bottom: &#39;home&#39;,
+                &nbsp; &nbsp; left: &#39;home&#39;
+                &nbsp; &nbsp;}
+                &nbsp; }
+                &nbsp;}
+                }</pre>
         </div>
     </div>
 </div>

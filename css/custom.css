@@ -1,0 +1,15 @@
+/* Webfont: Viktorie */@font-face {
+    font-family: 'Viktorie';
+    src: url('../fonts/Viktorie.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/Viktorie.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Viktorie.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Viktorie.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/Viktorie.svg#Viktorie') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+.arrow-name {
+  font-family: Viktorie, sans-serif;
+}
+
